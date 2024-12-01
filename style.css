@@ -54,6 +54,20 @@ body{
     width: 70px;
     border-radius: 15px;
 }
+@keyframes flicker{
+    0% {
+        transform: rotate(1deg);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+    50%{
+        transform: rotate(-1deg);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+    100%{
+        transform: rotate(1deg);
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    }
+}
 .layout{
     display: flex;
     justify-content: center;
@@ -64,7 +78,7 @@ body{
     margin-top: 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, 200px);
-    gap: 5px;
+    gap: 7px;
     justify-content: center;
 }
 .grid-item{
@@ -72,8 +86,28 @@ body{
     min-width: 150px;
     background-color: rgb(249, 55, 55);
     border-radius: 10px;
+    transition: opacity 0.1s ease;
+    overflow: hidden;
+}
+.flicker{
+    animation: flicker 0.5s infinite;
 }
 #game10{
     grid-row: span 2;
     grid-column: span 2;
-} 
+}
+.game-img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    object-position: center center;
+    transition: transform 0.5s ease;
+}
+#WOF{
+    scale: 1.1;
+}
+.game-img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+    filter: brightness(0.8);
+}
