@@ -9,20 +9,28 @@
 </head>
 <body>
     <div class="nav-bar">
+        <a href="index.html">
         <div class="logo">
             <img src="./playtopia_logo.png">
         </div>
+        </a>
         <div class="search">
             <input type="text" id="search" name="search" size="70" placeholder="Search">
         </div>
-        <div class="login">
-            <button class="login-btn">Log in</button>
+        <div class="signin">
+            <button class="signin-btn" onclick="signinPopup()">Sign in</button>
         </div>
     </div>
-    <div class="layout">
+    <div class="greeting-container">
+        <!-- <h2>
+            <span class="greeting"></span>
+            <span class="Name">Playtopian</span>
+        </h2> -->
+    </div>
+    <div class="layout" id="layout">
         <div class="grid-container">
-            <div class="grid-item" id="game1"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
             <a href="https://dg-cent-wof.netlify.app/"><div class="grid-item" id="game2"><img src="WOF.png" class="game-img" id="WOF"><strong class="game-name">Wheels of Fury</strong></div></a>
+            <div class="grid-item" id="game1"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
             <div class="grid-item" id="game3"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
             <div class="grid-item" id="game4"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
             <div class="grid-item" id="game5"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
@@ -41,5 +49,20 @@
             <div class="grid-item" id="game19"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
           </div>
     </div>
+    <div class="signin-tab-container" id="signin-tab-container">
+        <div class="signin-tab" id="signin-tab">
+            <div class="sign-in-header-container">
+                <h2 class="sign-in-header">Sign in</h2>
+                <form class="sign-in-form">
+                    <input type="text" size="40" id="name" name="name" placeholder=" Full name" class="input-box">
+                    <input type="text" size= "40" id="username" name="username" placeholder=" Username" class="input-box">
+                    <input type="email" size= "40" id="email" name="email" placeholder=" Email" class="input-box">
+                    <input type="password" size= "40" id="pass" name="pass" placeholder=" Set password" class="input-box">
+                    <input type="submit" id="sign-in-submit" name="sign-in-submit" value="Join" class="btn submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
