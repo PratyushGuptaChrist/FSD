@@ -7,8 +7,16 @@ function randomFlicker(){
 setInterval(randomFlicker, Math.random() * 4000);
 
 function signinPopup(){
+    document.getElementById("sign-in-tab-bg").style.display = "flex";
     document.getElementById("signin-tab-container").style.display = "flex";
     document.getElementById("signin-tab").classList.add('signin-tab-animation');
     document.body.classList.add('lock-scroll');
-    document.getElementById("layout").classList.add('dull');
+    //document.getElementById("layout").classList.add('dull');
+}
+
+function closePopup(){
+    document.getElementById("sign-in-tab-bg").style.display = "none";
+    document.getElementById("signin-tab-container").style.display = "none";
+    document.getElementById("signin-tab").classList.remove('signin-tab-animation');
+    document.body.classList.remove('lock-scroll');
 }

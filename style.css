@@ -73,6 +73,9 @@ input::placeholder {
     width: 70px;
     border-radius: 15px;
 }
+.signin-btn:hover{
+    cursor: pointer;
+}
 @keyframes flicker{
     0% {
         transform: rotate(1deg);
@@ -228,4 +231,38 @@ input::placeholder {
     font-weight: 700;
     border: none;
     border-radius: 5px;
+}
+.sign-in-tab-bg{
+    background-color: #000000b5;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+.leaderboards-icon-container{
+    height: 25px;
+    width: auto;
+    display: flex;
+    margin-right: -180px;
+}
+.leaderboards-icon-container:hover{
+    cursor: pointer;
+}
+.leaderboards-icon{
+    filter: invert(0.8);
+}
+.leaderboards-tab{
+    height: 700px;
+    width: 1000px;
+    background-color: #36013f;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: solid 1px #af0bd0;
+    z-index: 2;
+    border-radius: 10px;
 }
