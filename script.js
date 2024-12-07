@@ -20,3 +20,15 @@ function closePopup(){
     document.getElementById("signin-tab").classList.remove('signin-tab-animation');
     document.body.classList.remove('lock-scroll');
 }
+
+function leaderboardsPopup(){
+    document.getElementById("leaderboards-bg").style.display = "flex";
+    document.getElementById("leaderboards-tab").style.display = "flex";
+    document.body.classList.add('lock-scroll');
+}
+
+function closeLeaderboardsPopup(){
+    document.getElementById("leaderboards-bg").style.display = "none";
+    document.getElementById("leaderboards-tab").style.display = "none";
+    document.body.classList.remove('lock-scroll');
+}

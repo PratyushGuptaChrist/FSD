@@ -265,4 +265,66 @@ input::placeholder {
     border: solid 1px #af0bd0;
     z-index: 2;
     border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+.leaderboards-header-container{
+    position: absolute;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color:#4c025a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leaderboards-header{
+    display: flex;
+    font-size: xx-large;
+    color: white;
+    letter-spacing: 2px;
+}
+.table-container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    margin-top: 80px;
+    width: 90%;
+}
+.leaderboards-table{
+    margin: 25px 0;
+    font-size: large; 
+    color: white;
+    min-width: 100%;
+}
+
+th{
+    background-color: #31033c;
+    border: solid 1px #b305d5;
+    border-radius: 5px;
+}
+td{
+    background-color: #4c025a;
+    border: solid 1px #b305d5;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+.name-list{
+    padding-right: 100px;
+}
+.leaderboards-bg{
+    background-color: #000000b5;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+

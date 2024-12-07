@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <title>Playtopia</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
+
 <body>
     <nav class="nav-bar">
         <a href="index.html">
-        <div class="logo">
-            <img src="./playtopia_logo.png">
-        </div>
+            <div class="logo">
+                <img src="./playtopia_logo.png">
+            </div>
         </a>
         <div class="search">
             <input type="text" id="search" name="search" size="70" placeholder="Search">
         </div>
-        <div class="leaderboards-icon-container">
-            <img src="podium.png" class="leaderboards-icon">
+        <div onclick="leaderboardsPopup()" class="leaderboards-icon-container">
+            <img src="podium.png" class="leaderboards-icon" >
         </div>
         <div class="signin">
             <button class="signin-btn" onclick="signinPopup()">Sign in</button>
@@ -32,7 +34,10 @@
     </div>
     <section class="layout" id="layout">
         <div class="grid-container">
-            <a href="https://dg-cent-wof.netlify.app/"><div class="grid-item" id="game2"><img src="WOF.png" class="game-img" id="WOF"><strong class="game-name">Wheels of Fury</strong></div></a>
+            <a href="https://dg-cent-wof.netlify.app/">
+                <div class="grid-item" id="game2"><img src="WOF.png" class="game-img" id="WOF"><strong
+                        class="game-name">Wheels of Fury</strong></div>
+            </a>
             <div class="grid-item" id="game1"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
             <div class="grid-item" id="game3"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
             <div class="grid-item" id="game4"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
@@ -50,7 +55,7 @@
             <div class="grid-item" id="game17"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
             <div class="grid-item" id="game18"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
             <div class="grid-item" id="game19"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-          </div>
+        </div>
     </section>
     <div class="sign-in-tab-bg" id="sign-in-tab-bg" onclick="closePopup()">
         <div class="signin-tab-container" id="signin-tab-container">
@@ -59,20 +64,96 @@
                     <h2 class="sign-in-header">Sign in</h2>
                     <form class="sign-in-form">
                         <input type="text" size="40" id="name" name="name" placeholder=" Full name" class="input-box">
-                        <input type="text" size= "40" id="username" name="username" placeholder=" Username" class="input-box">
-                        <input type="email" size= "40" id="email" name="email" placeholder=" Email" class="input-box">
-                        <input type="password" size= "40" id="pass" name="pass" placeholder=" Set password" class="input-box">
-                        <input type="submit" id="sign-in-submit" name="sign-in-submit" value="Join" class="btn submit-btn">
+                        <input type="text" size="40" id="username" name="username" placeholder=" Username"
+                            class="input-box">
+                        <input type="email" size="40" id="email" name="email" placeholder=" Email" class="input-box">
+                        <input type="password" size="40" id="pass" name="pass" placeholder=" Set password"
+                            class="input-box">
+                        <input type="submit" id="sign-in-submit" name="sign-in-submit" value="Join"
+                            class="btn submit-btn">
                     </form>
-             </div>
+                </div>
             </div>
         </div>
     </div>
+    <div class="leaderboards-bg" id="leaderboards-bg" onclick="closeLeaderboardsPopup()"></div>
     <div class="leaderboards-container" id="leaderboards-container">
         <div class="leaderboards-tab" id="leaderboards-tab">
-            
+            <div class="leaderboards-header-container">
+                <h1 class="leaderboards-header">&#127775; LEADERBOARD &#127775;</h1>
+            </div>
+            <div class="table-container">
+                <table class="leaderboards-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th class="name-list">Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="name-list">Alex</td>
+                            <td>4200</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="name-list">Jordan</td>
+                            <td>3800</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="name-list">Taylor</td>
+                            <td>3500</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="name-list">Chris</td>
+                            <td>3300</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="name-list">Morgan</td>
+                            <td>3200</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="name-list">Casey</td>
+                            <td>3100</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td class="name-list">Riley</td>
+                            <td>3000</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td class="name-list">Jamie</td>
+                            <td>2800</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td class="name-list">Parker</td>
+                            <td>2600</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td class="name-list">Taylor</td>
+                            <td>2400</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td class="name-list">Jordan</td>
+                            <td>2200</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    
+
 </body>
+
 </html>
