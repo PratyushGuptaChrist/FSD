@@ -32,3 +32,7 @@ function closeLeaderboardsPopup(){
     document.getElementById("leaderboards-tab").style.display = "none";
     document.body.classList.remove('lock-scroll');
 }
+
+function Wheels_of_fury(){
+    window.open("Wheels_of_fury.html");
+}

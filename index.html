@@ -36,7 +36,7 @@
         <div class="grid-container">
             <a href="https://dg-cent-wof.netlify.app/">
                 <div class="grid-item" id="game2"><img src="WOF.png" class="game-img" id="WOF"><strong
-                        class="game-name">Wheels of Fury</strong></div>
+                        class="game-name">Wheels of Fury</strong><div class="game-info-btn" onclick="event.preventDefault(); Wheels_of_fury()"><span class="game-info-btn-text">i</span></div></div>
             </a>
             <div class="grid-item" id="game1"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
             <div class="grid-item" id="game3"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
@@ -86,9 +86,8 @@
                 <table class="leaderboards-table">
                     <thead>
                         <tr>
-                            <th>Rank</th>
-                            <th class="name-list">Name</th>
-                            <th>Score</th>
+                            <th rowspan="2">Rank</th>
+                            <th class="name-list" colspan="2">Player Info</th>
                         </tr>
                     </thead>
                     <tbody>
