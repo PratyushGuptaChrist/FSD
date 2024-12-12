@@ -7,6 +7,8 @@
     <title>Playtopia</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/355993ce43.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,7 +19,8 @@
             </div>
         </a>
         <div class="search">
-            <input type="text" id="search" name="search" size="70" placeholder="Search">
+            <input type="text" id="search" name="search" size="70" placeholder="Search" onkeyup="searchFun()">
+            <i class="fa solid fa-magnifying-glass"></i>
         </div>
         <div onclick="leaderboardsPopup()" class="leaderboards-icon-container">
             <img src="podium.png" class="leaderboards-icon" >
@@ -33,49 +36,45 @@
         </h2> -->
     </div>
     <section class="layout" id="layout">
-        <div class="grid-container">
+        <div class="grid-container" id="grid-container">
             <a href="https://dg-cent-wof.netlify.app/">
-                <div class="grid-item" id="game2"><img src="WOF.png" class="game-img" id="WOF"><strong
-                        class="game-name">Wheels of Fury</strong><div class="game-info-btn" onclick="event.preventDefault(); Wheels_of_fury()"><span class="game-info-btn-text">i</span></div></div>
+                <div class="grid-item" id="game2">
+                    <img src="WOF.png" class="game-img" id="WOF">
+                    <strong class="game-name">Wheels of Fury</strong>
+                    <div class="game-info-btn" onclick="event.preventDefault(); Wheels_of_fury()">
+                        <span class="game-info-btn-text">i</span>
+                    </div>
+                </div>
             </a>
-            <div class="grid-item" id="game1"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game3"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game4"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game5"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game6"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game7"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game8"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game9"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game10"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game12"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game13"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game14"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game15"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game16"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game17"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game18"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
-            <div class="grid-item" id="game19"><img src="SubSurf.png" alt="Image Description" class="game-img"></div>
+            <a href=#>
+                <div class="grid-item" id="game2">
+                    <img src="SubSurf.png" class="game-img" id="SubSurf">
+                    <strong class="game-name">Subway Surfers</strong>
+                    <div class="game-info-btn" onclick="event.preventDefault(); Wheels_of_fury()">
+                        <span class="game-info-btn-text">i</span>
+                    </div>
+                </div>
+            </a>
         </div>
     </section>
-    <div class="sign-in-tab-bg" id="sign-in-tab-bg" onclick="closePopup()">
-        <div class="signin-tab-container" id="signin-tab-container">
-            <div class="signin-tab" id="signin-tab">
-                <div class="sign-in-header-container">
-                    <h2 class="sign-in-header">Sign in</h2>
-                    <form class="sign-in-form">
-                        <input type="text" size="40" id="name" name="name" placeholder=" Full name" class="input-box">
-                        <input type="text" size="40" id="username" name="username" placeholder=" Username"
-                            class="input-box">
-                        <input type="email" size="40" id="email" name="email" placeholder=" Email" class="input-box">
-                        <input type="password" size="40" id="pass" name="pass" placeholder=" Set password"
-                            class="input-box">
-                        <input type="submit" id="sign-in-submit" name="sign-in-submit" value="Join"
-                            class="btn submit-btn">
-                    </form>
-                </div>
+    <div class="sign-in-tab-bg" id="sign-in-tab-bg" onclick="closePopup()"></div>
+    <div class="signin-tab-container" id="signin-tab-container">
+        <div class="signin-tab" id="signin-tab">
+            <div class="sign-in-header-container">
+                <h2 class="sign-in-header">Sign in</h2>
+                <form class="sign-in-form">
+                    <input type="text" size="40" id="name" name="name" placeholder=" Full name" class="input-box">
+                    <input type="text" size="40" id="username" name="username" placeholder=" Username" class="input-box">
+                    <input type="email" size="40" id="email" name="email" placeholder=" Email" class="input-box">
+                    <input type="password" size="40" id="pass" name="pass" placeholder=" Set password" class="input-box">
+                    <input type="number" size="80" id="age" name="age" placeholder=" Age" class="input-box"
+                        style="width: 290px;">
+                    <input type="submit" id="sign-in-submit" name="sign-in-submit" value="Join" class="btn submit-btn">
+                </form>
             </div>
         </div>
     </div>
+    
     <div class="leaderboards-bg" id="leaderboards-bg" onclick="closeLeaderboardsPopup()"></div>
     <div class="leaderboards-container" id="leaderboards-container">
         <div class="leaderboards-tab" id="leaderboards-tab">

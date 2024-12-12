@@ -1,3 +1,27 @@
+const searchFun = () =>{
+    let filter = document.getElementById('search').value.toUpperCase();
+
+    let myGames = document.getElementById('grid-container');
+
+    let a = myGames.getElementsByTagName('a');
+
+    var flag = 0;
+
+    for(var i=0; i<a.length; i++){
+        let divHolder = a[i].getElementsByTagName('div');
+        let name = divHolder[0].getElementsByTagName('strong');
+
+        if(name[0]){
+            let textValue = name[0].textContent || name[0].innerHTML;
+            if(textValue.toUpperCase().indexOf(filter) > -1){
+                a[i].style.display="";
+                flag = 1;
+            } else {
+                a[i].style.display="none";
+            }
+        }
+    }
+}
 function randomFlicker(){
     const gridItems = document.querySelectorAll('.grid-item');
     gridItems.forEach(items => items.classList.remove('flicker'));
@@ -11,6 +35,8 @@ function signinPopup(){
     document.getElementById("signin-tab-container").style.display = "flex";
     document.getElementById("signin-tab").classList.add('signin-tab-animation');
     document.body.classList.add('lock-scroll');
+    document.getElementById('signin-tab-container').style.zIndex="2";
+    document.getElementById('sign-in-tab-bg').style.zIndex="1";
     //document.getElementById("layout").classList.add('dull');
 }
 
